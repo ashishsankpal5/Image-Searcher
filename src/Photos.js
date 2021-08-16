@@ -7,9 +7,8 @@ import {
   Flex,
   Image,
   Grid,
-  Link,
 } from '@chakra-ui/react';
-// import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import axios from 'axios';
 
 const Photos = () => {
@@ -22,7 +21,7 @@ const Photos = () => {
   };
 
   const submithandler = (eve) => {
-    console.log(image);
+    // console.log(image);
 
     const fetchUrl =
       'https://api.unsplash.com/search/photos?per_page=30&query=' +
@@ -31,7 +30,7 @@ const Photos = () => {
       clientId;
 
     axios.get(fetchUrl).then((response) => {
-      console.log(response);
+      // console.log(response);
       setResult(response.data.results);
     });
   };
